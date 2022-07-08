@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_profil"
-        android:name="de.syntaxinstitut.veritasapp.fragment_profil"
+        android:name="de.syntaxinstitut.veritasapp.ui.two.ProfilFragment"
         android:label="fragment_profil"
         tools:layout="@layout/fragment_profil" />
     <fragment

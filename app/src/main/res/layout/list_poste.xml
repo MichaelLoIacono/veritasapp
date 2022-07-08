@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="138dp"
+            android:layout_width="130dp"
             android:layout_height="115dp"
             android:backgroundTint="#FFFFFF">
 
@@ -29,20 +29,22 @@
                 android:id="@+id/poste_bild"
                 android:layout_width="130dp"
                 android:layout_height="120dp"
+                android:layout_marginEnd="8dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/bild1"
-                tools:layout_editor_absoluteX="2dp"
-                tools:layout_editor_absoluteY="-7dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/bild1" />
 
             <TextView
                 android:id="@+id/poste_titel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:layout_marginStart="4dp"
                 android:textColor="#F1EDED"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                tools:layout_editor_absoluteY="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/poste_bild"
                 tools:text="Poste Title" />
 
 
