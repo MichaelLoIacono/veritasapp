@@ -3,20 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/oneFragment">
-
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/oneFragment"
-        android:name="de.syntaxinstitut.veritasapp.ui.one.OneFragment"
-        android:label="OneFragment"
-        tools:layout="@layout/fragment_one">
+        android:id="@+id/homeFragment"
+        android:name="de.syntaxinstitut.veritasapp.ui.two.HomeFragment"
+        android:label="HomeFragment" >
         <action
-            android:id="@+id/action_oneFragment_to_twoFragment"
-            app:destination="@id/twoFragment" />
+            android:id="@+id/action_homeFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragment_showroom"
+            app:destination="@id/fragment_showroom" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragment_profil"
+            app:destination="@id/fragment_profil" />
     </fragment>
     <fragment
-        android:id="@+id/twoFragment"
-        android:name="de.syntaxinstitut.veritasapp.ui.two.TwoFragment"
-        android:label="TwoFragment"
-        tools:layout="@layout/fragment_two"/>
+        android:id="@+id/communityFragment"
+        android:name="com.example.poste.de.syntaxinstitut.veritasapp.ui.community.CommunityFragment"
+        android:label="CommunityFragment" >
+        <action
+            android:id="@+id/action_communityFragment_to_fragment_showroom"
+            app:destination="@id/fragment_showroom" />
+        <action
+            android:id="@+id/action_communityFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_showroom"
+        android:name="de.syntaxinstitut.veritasapp.fragment_showroom"
+        android:label="fragment_showroom"
+        tools:layout="@layout/fragment_showroom" >
+        <action
+            android:id="@+id/action_fragment_showroom_to_communityFragment"
+            app:destination="@id/communityFragment" />
+        <action
+            android:id="@+id/action_fragment_showroom_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_profil"
+        android:name="de.syntaxinstitut.veritasapp.fragment_profil"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/fragment_profildaten"
+        android:name="de.syntaxinstitut.veritasapp.Fragment_profildaten"
+        android:label="fragment_profildaten"
+        tools:layout="@layout/fragment_profildaten" />
+    <fragment
+        android:id="@+id/fragment_sammlung"
+        android:name="de.syntaxinstitut.veritasapp.Fragment_sammlung"
+        android:label="fragment_sammlung"
+        tools:layout="@layout/fragment_sammlung" />
 </navigation>
