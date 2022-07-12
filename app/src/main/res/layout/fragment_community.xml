@@ -9,22 +9,25 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_list">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="match_parent"
+            >
+<!--
             <ImageView
                 android:id="@+id/shadow"
                 android:layout_width="1258dp"
                 android:layout_height="414dp"
+                app:tint="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/shado" />
+                -->
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
@@ -42,11 +45,12 @@
                     app:srcCompat="@drawable/logoname" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/favorit"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -55,7 +59,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="128dp"
-                        android:layout_marginTop="164dp"
+                        android:layout_marginTop="92dp"
                         android:text="Community Blog"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
@@ -66,14 +70,36 @@
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/posteListe"
-                        android:layout_width="416dp"
-                        android:layout_height="486dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="565dp"
+                        android:layout_marginTop="54dp"
                         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title_community"
                         app:spanCount="3"
                         tools:itemCount="5"
                         tools:listitem="@layout/list_poste" />
+
+                    <ImageView
+                        android:id="@+id/favoritIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="44dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_outline_bookmark_border_24" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/favoritIcon"
+                        app:layout_constraintStart_toEndOf="@+id/favoritIcon"
+                        app:srcCompat="@drawable/ic_outline_send_24" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
