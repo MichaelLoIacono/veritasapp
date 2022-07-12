@@ -35,7 +35,7 @@
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:srcCompat="@drawable/bild1" />
+                app:srcCompat="@drawable/yugi" />
 
             <TextView
                 android:id="@+id/poste_titel"
