@@ -16,7 +16,7 @@ class Datasource(private val context: Context) {
      * Diese Funktion holt die Titel & Bilder aus der Quelldatei
      * und liefert eine Liste aus Filmen zurück
      */
-    fun loadMovies(): List<Poste> {
+    fun loadPostes(): List<Poste> {
         // Die Liste an Bilder
         val postes = mutableListOf<Poste>()
 
@@ -32,7 +32,7 @@ class Datasource(private val context: Context) {
             postes.add(
 
                 Poste(title, image,screen)
-                       // Poste(title, image, screen)
+
 
             )
         }

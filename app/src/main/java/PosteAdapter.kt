@@ -18,7 +18,7 @@ class PosteAdapter(private val posteListe: List<Poste>) :
 
     override fun onBindViewHolder(holder: PosteViewHolder, position: Int) {
         val poste = posteListe[position]
-        holder.binding.posteTitel.text = poste.titel
+        holder.binding.posteTitel.text = poste.titel.toString()
         holder.binding.posteBild.setImageResource(poste.imageId)
         holder.itemView.setOnClickListener {
             val navController = holder.itemView.findNavController()

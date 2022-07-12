@@ -46,7 +46,7 @@ class CommunityFragment : Fragment(R.layout.fragment_community) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val posteList = Datasource().loadposte()
+        val posteList = Datasource(requireContext()).loadPostes()
         val recyclerView = binding.posteListe
         recyclerView.layoutManager = GridLayoutManager(activity,3)
         recyclerView.adapter = PosteAdapter(posteList)
