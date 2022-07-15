@@ -56,9 +56,12 @@
         tools:layout="@layout/fragment_profildaten" />
     <fragment
         android:id="@+id/fragment_sammlung"
-        android:name="de.syntaxinstitut.veritasapp.Fragment_sammlung"
-        android:label="fragment_sammlung"
-        tools:layout="@layout/fragment_sammlung" />
+        android:name="de.syntaxinstitut.veritasapp.SammlungFragment"
+        android:label="fragment_sammlung" >
+        <action
+            android:id="@+id/action_fragment_sammlung_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.example.poste.de.syntaxinstitut.veritasapp.ui.two.DetailFragment"

@@ -1,5 +1,21 @@
 <resources>
+
     <string name="app_name">VeritasApp</string>
+
+
+    <string name="posteTitle1">augilera</string>
+    <string name="posteTitle2">camoran</string>
+    <string name="posteTitle3">deku</string>
+    <string name="posteTitle4">greenranger</string>
+    <string name="posteTitle5">kakashi</string>
+    <string name="posteTitle6">songoku</string>
+    <string name="posteTitle7">spiderman</string>
+    <string name="posteTitle8">tobi</string>
+    <string name="posteTitle9">yugi</string>
+
+    <!-- UI -->
+    <string name="postes">Bilder</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

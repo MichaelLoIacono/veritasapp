@@ -24,9 +24,10 @@ class Datasource(private val context: Context) {
         for (index in 1..numberOfTitles) {
 
             // Hole den Titel und das Bild
-            val title = getTitle(index)
+           val title = getTitle(index)
             val image = getImage(title)
             val screen = getScreen(title)
+            
 
             // Füge ein Movie Objekt hinzu
             postes.add(
