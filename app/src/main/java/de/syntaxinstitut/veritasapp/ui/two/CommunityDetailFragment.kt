@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.net.toUri
-import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
@@ -19,16 +18,18 @@ import de.syntaxinstitut.veritasapp.R
 import de.syntaxinstitut.veritasapp.databinding.FragmentDetailBinding
 
 
-class DetailFragment : Fragment() {
+
+class CommunityDetailFragment : Fragment() {
+
     private val viewModel: ViewModel by activityViewModels()
-    private lateinit var binding: FragmentDetailBinding
-    private lateinit var poste: Poste
+    private lateinit var  binding: FragmentDetailBinding
+    private lateinit var poste: ImageData
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            poste  = viewModel.posteList[it.getInt("position")]
+            poste  = viewModel.imageList.value!![it.getInt("position")]
         }
     }
 
@@ -45,32 +46,31 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-        val bildTitel = getString(poste.titel)
+        val bildTitel = poste.bildname
 
-
-        binding.favoritBtn.isVisible = false
 
         binding.bildTitel.text = bildTitel
 
-        binding.bildScreen.setImageResource(poste.screenId)
+        val imgUri = poste.file.toUri().buildUpon().scheme("http").build()
 
-        binding.backButton.setOnClickListener {
-            findNavController().navigateUp()
+        binding.bildScreen.load(imgUri) {
+            error(R.drawable.ic_baseline_broken_image_24)
+            transformations(RoundedCornersTransformation(10f))
         }
 
         binding.backButton.setOnClickListener {
             findNavController().navigateUp()
         }
-        if (poste.like == true) {
+        if(poste.like == true){
 
             binding.likeButton.setImageResource(R.drawable.ic_baseline_thumb_up_242)
         } else {
             binding.likeButton.setImageResource(R.drawable.ic_baseline_thumb_up_off_alt_24)
 
         }
-        binding.likeButton.setOnClickListener {
+        binding.likeButton.setOnClickListener{
             poste.like = !poste.like
-            if (poste.like == true) {
+            if(poste.like == true){
 
                 binding.likeButton.setImageResource(R.drawable.ic_baseline_thumb_up_242)
             } else {
@@ -78,6 +78,24 @@ class DetailFragment : Fragment() {
 
             }
         }
-    }
 
+        if(poste.favorit == true){
+
+            binding.favoritBtn.setImageResource(R.drawable.ic_baseline_bookmark_24)
+        } else {
+            binding.favoritBtn.setImageResource(R.drawable.ic_outline_bookmark_border_24)
+
+        }
+        binding.favoritBtn.setOnClickListener{
+            poste.favorit = !poste.favorit
+            if(poste.favorit == true){
+
+                binding.favoritBtn.setImageResource(R.drawable.ic_baseline_bookmark_24)
+            } else {
+                binding.favoritBtn.setImageResource(R.drawable.ic_outline_bookmark_border_24)
+
+            }
+        }
+
+    }
 }

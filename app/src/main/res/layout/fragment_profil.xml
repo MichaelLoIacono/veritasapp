@@ -1,139 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/sammlung"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/background_3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-    <ImageView
-        android:id="@+id/hintergrundbild"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:alpha="0.3"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hintergrundbildx" />
+    </data>
 
-    <ImageView
-        android:id="@+id/profilbild"
-        android:layout_width="412dp"
-        android:layout_height="734dp"
-        android:layout_marginBottom="208dp"
-        android:src="@drawable/profilbild"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background_3">
 
-        <TextView
-            android:id="@+id/abonniert"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:text="Abonniert
+
+
+        <ImageView
+            android:id="@+id/hintergrundbild"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.3"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hintergrundbildx" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/abonniert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:text="Abonniert
     "
-            app:layout_constraintStart_toEndOf="@+id/follower"
-            app:layout_constraintTop_toTopOf="@+id/follower" />
+                app:layout_constraintStart_toEndOf="@+id/follower"
+                app:layout_constraintTop_toTopOf="@+id/follower" />
 
-        <TextView
-            android:id="@+id/follower"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
-            android:text="Follower"
-            app:layout_constraintStart_toEndOf="@+id/beiträge"
-            app:layout_constraintTop_toTopOf="@+id/beiträge" />
+            <TextView
+                android:id="@+id/follower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:text="Follower"
+                app:layout_constraintStart_toEndOf="@+id/beiträge"
+                app:layout_constraintTop_toTopOf="@+id/beiträge" />
 
-        <TextView
-            android:id="@+id/beiträge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:layout_marginTop="396dp"
-            android:text="Beiträge"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/beiträge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="396dp"
+                android:text="Beiträge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/editTextNumber"
-            android:layout_width="50dp"
-            android:layout_height="33dp"
-            android:ems="10"
-            android:inputType="number"
-            app:layout_constraintStart_toStartOf="@+id/beiträge"
-            app:layout_constraintTop_toBottomOf="@+id/beiträge" />
+            <EditText
+                android:id="@+id/editTextNumber"
+                android:layout_width="50dp"
+                android:layout_height="33dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="@+id/beiträge"
+                app:layout_constraintTop_toBottomOf="@+id/beiträge" />
 
-        <EditText
-            android:id="@+id/editTextNumber2"
-            android:layout_width="54dp"
-            android:layout_height="33dp"
-            android:ems="10"
-            android:inputType="number"
-            app:layout_constraintStart_toStartOf="@+id/follower"
-            app:layout_constraintTop_toBottomOf="@+id/follower" />
+            <EditText
+                android:id="@+id/editTextNumber2"
+                android:layout_width="54dp"
+                android:layout_height="33dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="@+id/follower"
+                app:layout_constraintTop_toBottomOf="@+id/follower" />
 
-        <EditText
-            android:id="@+id/editTextNumber3"
-            android:layout_width="50dp"
-            android:layout_height="33dp"
-            android:ems="10"
-            android:inputType="number"
-            app:layout_constraintStart_toStartOf="@+id/abonniert"
-            app:layout_constraintTop_toBottomOf="@+id/abonniert" />
+            <EditText
+                android:id="@+id/editTextNumber3"
+                android:layout_width="50dp"
+                android:layout_height="33dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="@+id/abonniert"
+                app:layout_constraintTop_toBottomOf="@+id/abonniert" />
 
-        <TextView
-            android:id="@+id/profilname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="42dp"
-            android:layout_marginBottom="40dp"
-            android:text="Michael Lo Iacono"
-            app:layout_constraintBottom_toTopOf="@+id/abonniert"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:textSize="40dp" />
+            <TextView
+                android:id="@+id/profilname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:layout_marginBottom="40dp"
+                android:text="Michael Lo Iacono"
+                android:textSize="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/abonniert"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:layout_marginBottom="160dp"
-            android:backgroundTint="#11ED7B"
-            android:src="@drawable/ic_outline_person_add_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="160dp"
+                android:backgroundTint="#11ED7B"
+                android:src="@drawable/ic_outline_person_add_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="184dp"
-            android:layout_marginBottom="160dp"
-            android:backgroundTint="#11ED7B"
-            android:src="@drawable/ic_outline_send_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageButton" />
+            <ImageButton
+                android:id="@+id/sendButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="160dp"
+                android:backgroundTint="#11ED7B"
+                android:src="@drawable/ic_outline_send_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumber3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/profilbild"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profilbild"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
 
 
 

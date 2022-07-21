@@ -25,15 +25,15 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/hintergrundbildx" />
 
-                <ImageView
-                    android:id="@+id/logo"
-                    android:layout_width="303dp"
-                    android:layout_height="187dp"
-                    android:layout_marginStart="52dp"
-                    android:layout_marginTop="32dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/logoname" />
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="303dp"
+            android:layout_height="187dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logoname" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/favorit"
@@ -50,7 +50,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="128dp"
-                        android:layout_marginTop="92dp"
+                        android:layout_marginTop="108dp"
                         android:text="Community Blog"
                         android:textColor="#FFFFFF"
                         android:textSize="20sp"
@@ -61,8 +61,8 @@
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/posteListe"
-                        android:layout_width="match_parent"
-                        android:layout_height="565dp"
+                        android:layout_width="410dp"
+                        android:layout_height="454dp"
                         android:layout_marginTop="54dp"
                         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,23 +74,57 @@
                         tools:listitem="@layout/list_poste" />
 
                     <ImageView
-                        android:id="@+id/favoritIcon"
+                        android:id="@+id/send"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="44dp"
+                        android:layout_marginStart="56dp"
+                        android:layout_marginTop="24dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_outline_bookmark_border_24" />
+                        app:srcCompat="@drawable/ic_outline_send_24" />
+
+                    <ImageView
+                        android:id="@+id/profilStroy"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="24dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toTopOf="@+id/posteListe"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title_community"
+                        app:srcCompat="@drawable/profilbild" />
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="409dp"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="8dp"
+                        android:background="?android:attr/listDivider"
+                        android:backgroundTint="#FFFFFF"
+                        app:layout_constraintBottom_toTopOf="@+id/posteListe"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/profilStroy" />
+
+                    <ImageView
+                        android:id="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/send"
+                        app:srcCompat="@drawable/ic_baseline_search_24" />
 
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/favoritIcon"
-                        app:layout_constraintStart_toEndOf="@+id/favoritIcon"
-                        app:srcCompat="@drawable/ic_outline_send_24" />
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintEnd_toStartOf="@+id/send"
+                        app:layout_constraintTop_toTopOf="@+id/send"
+                        app:srcCompat="@drawable/ic_baseline_bookmark_border_24" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

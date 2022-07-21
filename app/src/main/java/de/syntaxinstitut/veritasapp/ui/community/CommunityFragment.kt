@@ -1,22 +1,18 @@
 package com.example.poste.de.syntaxinstitut.veritasapp.ui.community
 
-import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.poste.Datasource
-import com.example.poste.PosteAdapter
+import com.example.poste.ImageAdapter
+import com.example.poste.de.syntaxinstitut.veritasapp.Adapter.PosteAdapter
+import com.example.poste.de.syntaxinstitut.veritasapp.ui.two.ViewModel
 import de.syntaxinstitut.veritasapp.R
 import de.syntaxinstitut.veritasapp.databinding.FragmentCommunityBinding
-import de.syntaxinstitut.veritasapp.databinding.FragmentTwoBinding
-import de.syntaxinstitut.veritasapp.ui.two.TwoViewModel
 
 class CommunityFragment : Fragment(R.layout.fragment_community) {
 
@@ -24,6 +20,7 @@ class CommunityFragment : Fragment(R.layout.fragment_community) {
 
     /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
     private lateinit var binding: FragmentCommunityBinding
+    private val viewModel: ViewModel by activityViewModels()
 
 
     /* -------------------- Lifecycle -------------------- */
@@ -46,11 +43,15 @@ class CommunityFragment : Fragment(R.layout.fragment_community) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val posteList = Datasource(requireContext()).loadPostes()
         val recyclerView = binding.posteListe
+        viewModel.loadimages()
         recyclerView.layoutManager = GridLayoutManager(activity,3)
-        recyclerView.adapter = PosteAdapter(posteList)
         recyclerView.setHasFixedSize(true)
+
+        viewModel.imageList.observe(viewLifecycleOwner){
+            print("eiweiss")
+            recyclerView.adapter =ImageAdapter(it,"community")
+        }
 
 
     }

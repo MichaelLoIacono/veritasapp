@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="176dp"
-    android:background="#165934">
+    android:background="@drawable/background_3">
 
     <ImageView
         android:id="@+id/imageView"
@@ -16,4 +16,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logoname" />
+
+    <ImageView
+        android:id="@+id/hintergrundbild"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.3"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hintergrundbildx" />
 </androidx.constraintlayout.widget.ConstraintLayout>

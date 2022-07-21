@@ -6,6 +6,7 @@ package com.example.poste
 data class Poste(
     val titel:Int,
     val imageId:Int,
-    val bildScreen:Int,
+    val screenId:Int,
+    var like:Boolean= false,
 ) {
 }

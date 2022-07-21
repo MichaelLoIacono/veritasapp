@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_communityFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_communityFragment_to_communityDetailFragment"
+            app:destination="@id/communityDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_showroom"
@@ -67,13 +70,15 @@
         android:name="com.example.poste.de.syntaxinstitut.veritasapp.ui.two.DetailFragment"
         android:label="DetailFragment" >
         <argument
-            android:name="imagId"
+            android:name="position"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityDetailFragment"
+        android:name="com.example.poste.de.syntaxinstitut.veritasapp.ui.two.CommunityDetailFragment"
+        android:label="CommunityDetailFragment" >
         <argument
-            android:name="stringId"
-            app:argType="integer" />
-        <argument
-            android:name="screenId"
+            android:name="position"
             app:argType="integer" />
     </fragment>
 </navigation>

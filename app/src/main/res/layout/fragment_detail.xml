@@ -48,5 +48,25 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageButton
+            android:id="@+id/likeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#65E375"
+            app:layout_constraintStart_toStartOf="@+id/bild_screen"
+            app:layout_constraintTop_toBottomOf="@+id/bild_screen"
+            app:srcCompat="@drawable/ic_baseline_thumb_up_off_alt_24" />
+
+        <ImageButton
+            android:id="@+id/favoritBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#00FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/likeButton"
+            app:layout_constraintTop_toTopOf="@+id/likeButton"
+            app:srcCompat="@drawable/ic_outline_bookmark_border_24" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -5,11 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.poste.Datasource
-import com.example.poste.PosteAdapter
+import com.example.poste.de.syntaxinstitut.veritasapp.Adapter.PosteAdapter
+import com.example.poste.de.syntaxinstitut.veritasapp.ui.two.ViewModel
 import de.syntaxinstitut.veritasapp.databinding.FragmentSammlungBinding
 
 /* -------------------- Klassen Variablen -------------------- */
@@ -18,6 +18,7 @@ class SammlungFragment : Fragment(R.layout.fragment_sammlung) {
 
     /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
     private lateinit var binding: FragmentSammlungBinding
+    private val viewModel: ViewModel by activityViewModels()
 
 
 /* -------------------- Lifecycle -------------------- */
@@ -40,10 +41,10 @@ class SammlungFragment : Fragment(R.layout.fragment_sammlung) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val posteList = Datasource(requireContext()).loadPostes()
+        val posteList = viewModel.posteList
         val recyclerView = binding.posteListe2
         recyclerView.layoutManager = GridLayoutManager(activity,3)
-        recyclerView.adapter = PosteAdapter(posteList)
+        recyclerView.adapter = PosteAdapter(posteList,"sammlung")
         recyclerView.setHasFixedSize(true)
 
 
