@@ -16,6 +16,12 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
 
     val database = getDatabase(application)
     val posteList = Datasource(application).loadPostes()
+    private var _dataBaseImageListe = MutableLiveData<List<ImageData>>()
+    val dataBaseImageList: LiveData<List<ImageData>>
+        get() = _dataBaseImageListe
+    val mediator= MediatorLiveData<List<ImageData>>()
+
+
 
     // Enzieht die Informationen aus der AppRepository
     private val repository = AppRepository(
@@ -30,6 +36,15 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
             repository.getImages()
         }
     }
+    fun getImagesDatabase(){
+        viewModelScope.launch {
+           //_dataBaseImageListe = database.veritasDatabaseDao.getAll()
+            mediator.addSource(database.veritasDatabaseDao.getAll(),{
+                _dataBaseImageListe.value = it
+            })
+        }
+    }
+
     fun saveImage(image:ImageData){
         viewModelScope.launch {
             database.veritasDatabaseDao.insertIMAGE(image)
@@ -37,8 +52,7 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
     }
     fun deletImage(image:ImageData){
         viewModelScope.launch {
-            //database.veritasDatabaseDao.deleteById(image.id)
-            println("hallo"+image.id)
+            database.veritasDatabaseDao.deleteById(image.bildname)
         }
     }
 }

@@ -2,6 +2,7 @@ package com.example.poste.de.syntaxinstitut.veritasapp.local
 
 import android.content.Context
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.room.*
 import com.example.poste.de.syntaxinstitut.veritasapp.Datamodel.ImageData
 
@@ -44,6 +45,6 @@ interface VeritasDatabaseDao {
      * Diese Funktion löscht das Element mit der übergebenen ID aus der Datenbank
      * Der Abruf wird in Query spezifiziert
      */
-    @Query("DELETE from ImageData WHERE id = :id")
-    suspend fun deleteById(id: Long)
+    @Query("DELETE from ImageData WHERE bildname = :bildname")
+    suspend fun deleteById(bildname: String)
 }

@@ -89,7 +89,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoritFragment"
-        android:name="de.syntaxinstitut.veritasapp.FavoritFragment"
+        android:name="de.syntaxinstitut.veritasapp.ui.two.FavoritFragment"
         android:label="fragment_favorit"
         tools:layout="@layout/fragment_favorit" />
 </navigation>
