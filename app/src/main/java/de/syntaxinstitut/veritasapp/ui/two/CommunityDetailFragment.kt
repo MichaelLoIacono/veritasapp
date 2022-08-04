@@ -14,6 +14,7 @@ import coil.load
 import coil.transform.RoundedCornersTransformation
 import com.example.poste.Poste
 import com.example.poste.de.syntaxinstitut.veritasapp.Datamodel.ImageData
+import com.example.poste.de.syntaxinstitut.veritasapp.local.VeritasDatabase
 import de.syntaxinstitut.veritasapp.R
 import de.syntaxinstitut.veritasapp.databinding.FragmentDetailBinding
 
@@ -89,10 +90,12 @@ class CommunityDetailFragment : Fragment() {
         binding.favoritBtn.setOnClickListener{
             poste.favorit = !poste.favorit
             if(poste.favorit == true){
-
+            viewModel.saveImage(poste)
                 binding.favoritBtn.setImageResource(R.drawable.ic_baseline_bookmark_24)
             } else {
                 binding.favoritBtn.setImageResource(R.drawable.ic_outline_bookmark_border_24)
+                viewModel.deletImage(poste)
+
 
             }
         }

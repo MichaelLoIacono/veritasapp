@@ -32,7 +32,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/eigeneBilder"
+                android:id="@+id/favorit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -50,7 +50,7 @@
                 android:layout_marginTop="28dp"
                 android:backgroundTint="#11ED7B"
                 android:src="@drawable/ic_outline_add_photo_alternate_24"
-                app:layout_constraintStart_toEndOf="@+id/eigeneBilder"
+                app:layout_constraintStart_toEndOf="@+id/favorit"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -63,7 +63,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/eigeneBilder"
+                app:layout_constraintTop_toBottomOf="@+id/favorit"
                 app:spanCount="3"
                 tools:itemCount="5"
                 tools:listitem="@layout/list_poste" />

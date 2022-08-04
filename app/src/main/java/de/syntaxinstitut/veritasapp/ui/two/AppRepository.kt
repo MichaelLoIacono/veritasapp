@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.poste.de.syntaxinstitut.veritasapp.Datamodel.ImageData
+import com.example.poste.de.syntaxinstitut.veritasapp.local.VeritasDatabase
 import com.example.poste.de.syntaxinstitut.veritasapp.remote.VeritasApi
 import com.example.poste.de.syntaxinstitut.veritasapp.remote.VeritasApiService
 import kotlinx.coroutines.delay

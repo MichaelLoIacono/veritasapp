@@ -34,6 +34,12 @@
         <action
             android:id="@+id/action_communityFragment_to_communityDetailFragment"
             app:destination="@id/communityDetailFragment" />
+        <action
+            android:id="@+id/action_communityFragment_to_favoritFragment"
+            app:destination="@id/favoritFragment" />
+        <action
+            android:id="@+id/action_communityFragment_to_fragment_profil"
+            app:destination="@id/fragment_profil" />
     </fragment>
     <fragment
         android:id="@+id/fragment_showroom"
@@ -81,4 +87,9 @@
             android:name="position"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/favoritFragment"
+        android:name="de.syntaxinstitut.veritasapp.FavoritFragment"
+        android:label="fragment_favorit"
+        tools:layout="@layout/fragment_favorit" />
 </navigation>

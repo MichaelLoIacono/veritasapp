@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.poste.ImageAdapter
 import com.example.poste.de.syntaxinstitut.veritasapp.Adapter.PosteAdapter
 import com.example.poste.de.syntaxinstitut.veritasapp.ui.two.ViewModel
 import de.syntaxinstitut.veritasapp.R
 import de.syntaxinstitut.veritasapp.databinding.FragmentCommunityBinding
+import de.syntaxinstitut.veritasapp.ui.two.HomeFragmentDirections
 
 class CommunityFragment : Fragment(R.layout.fragment_community) {
 
@@ -24,6 +26,8 @@ class CommunityFragment : Fragment(R.layout.fragment_community) {
 
 
     /* -------------------- Lifecycle -------------------- */
+
+    
     /**
      * Lifecycle Methode wenn das View erstellt wird
      *
@@ -45,16 +49,23 @@ class CommunityFragment : Fragment(R.layout.fragment_community) {
         super.onViewCreated(view, savedInstanceState)
         val recyclerView = binding.posteListe
         viewModel.loadimages()
-        recyclerView.layoutManager = GridLayoutManager(activity,3)
+        recyclerView.layoutManager = GridLayoutManager(activity, 3)
         recyclerView.setHasFixedSize(true)
 
-        viewModel.imageList.observe(viewLifecycleOwner){
-            print("eiweiss")
-            recyclerView.adapter =ImageAdapter(it,"community")
+        viewModel.imageList.observe(viewLifecycleOwner) {
+            recyclerView.adapter = ImageAdapter(it, "community")
+        }
+        binding.favoritBtn2.setOnClickListener {
+            findNavController().navigate(CommunityFragmentDirections.actionCommunityFragmentToFavoritFragment())
+
+            binding.profilButton.setOnClickListener {
+                findNavController().navigate(CommunityFragmentDirections.actionCommunityFragmentToFragmentProfil())
+
+
+            }
+
+
         }
 
-
     }
-
-
 }
