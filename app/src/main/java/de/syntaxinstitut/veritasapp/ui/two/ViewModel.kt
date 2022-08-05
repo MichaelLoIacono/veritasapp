@@ -19,14 +19,14 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
     private var _dataBaseImageListe = MutableLiveData<List<ImageData>>()
     val dataBaseImageList: LiveData<List<ImageData>>
         get() = _dataBaseImageListe
-    val mediator= MediatorLiveData<List<ImageData>>()
-
+    val mediator = MediatorLiveData<List<ImageData>>()
 
 
     // Enzieht die Informationen aus der AppRepository
     private val repository = AppRepository(
         VeritasApi
     )
+
     // Hier wird die BildListe aud der Api Call gespeichert ( wird in LiveData gespeichert)
     val imageList = repository.imageList
 
@@ -36,26 +36,33 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
             repository.getImages()
         }
     }
-    fun getImagesDatabase(){
+
+    fun getImagesDatabase() {
         viewModelScope.launch {
-           //_dataBaseImageListe = database.veritasDatabaseDao.getAll()
-            mediator.addSource(database.veritasDatabaseDao.getAll(),{
-                _dataBaseImageListe.value = it
-            })
+            _dataBaseImageListe = database.veritasDatabaseDao.getAll().toMutableLiveData()
+
         }
     }
 
-    fun saveImage(image:ImageData){
+    fun saveImage(image: ImageData) {
         viewModelScope.launch {
             database.veritasDatabaseDao.insertIMAGE(image)
         }
     }
-    fun deletImage(image:ImageData){
+
+    fun deletImage(image: ImageData) {
         viewModelScope.launch {
             database.veritasDatabaseDao.deleteById(image.bildname)
         }
     }
 }
 
-
+// wandelt LiveData in MutableLiveData
+fun <T> LiveData<T>.toMutableLiveData(): MutableLiveData<T> {
+    val mediatorLiveData = MediatorLiveData<T>()
+    mediatorLiveData.addSource(this) {
+        mediatorLiveData.value = it
+    }
+    return mediatorLiveData
+}
 

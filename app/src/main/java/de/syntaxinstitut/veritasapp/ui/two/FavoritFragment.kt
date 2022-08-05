@@ -44,7 +44,7 @@ class FavoritFragment : Fragment() {
         recyclerView.layoutManager = GridLayoutManager(activity, 3)
         recyclerView.setHasFixedSize(true)
 
-        viewModel.mediator.observe(viewLifecycleOwner) {
+        viewModel.dataBaseImageList.observe(viewLifecycleOwner) {
             recyclerView.adapter = FavoriteAdapter(it, "favorite")
         }
 
