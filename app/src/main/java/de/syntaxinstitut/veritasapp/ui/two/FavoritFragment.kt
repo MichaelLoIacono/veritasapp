@@ -43,17 +43,7 @@ class FavoritFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 
-       // val bildTitel = poste.bildname
 
-
-      //  binding.bildTitel.text = bildTitel
-
-       // val imgUri = poste.file.toUri().buildUpon().scheme("http").build()
-
-        //binding.bildScreen.load(imgUri) {
-            //error(R.drawable.ic_baseline_broken_image_24)
-            //transformations(RoundedCornersTransformation(10f))
-        //}
 
         super.onViewCreated(view, savedInstanceState)
         val recyclerView = binding.posteListe

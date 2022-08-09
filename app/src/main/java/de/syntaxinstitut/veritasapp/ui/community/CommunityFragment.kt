@@ -44,7 +44,7 @@ class CommunityFragment : Fragment(R.layout.fragment_community) {
 
         return binding.root
     }
-
+    // Hier werden die Bilder Neugeladen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val recyclerView = binding.posteListe

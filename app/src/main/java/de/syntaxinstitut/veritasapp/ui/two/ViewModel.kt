@@ -30,11 +30,17 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
     // Hier wird die BildListe aud der Api Call gespeichert ( wird in LiveData gespeichert)
     val imageList = repository.imageList
 
+    //Wenn noch keine images geladen sind, ist imageList.value null und somit ImageList.value?.isEmpty() ungleich false.
+    // Der Ausdruck ist auch nicht true aber der code in der if Bedingung(das Laden der Bilder) wird nur ausgeführt wenn noch keine Bilder geladen sind.
+    // ToDo muss noch richtig umgeschrieben werden, dient nur zum Fixen des Problem.
+
     // Jedes mal wenn die Api Call neu ausgeführt werden soll, wird die Funktion aufgerufen.
     fun loadimages() {
-        viewModelScope.launch {
-            repository.getImages()
-        }
+        if (imageList.value?.isEmpty() !=false) {
+           viewModelScope.launch {
+               repository.getImages()
+           }
+       }
     }
 
     fun getImagesDatabase() {
