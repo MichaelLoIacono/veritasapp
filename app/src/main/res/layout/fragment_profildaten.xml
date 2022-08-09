@@ -135,8 +135,8 @@
 
             <ImageView
                 android:id="@+id/settings"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginEnd="24dp"
                 android:src="@drawable/ic_outline_settings_24"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -144,8 +144,8 @@
 
             <ImageView
                 android:id="@+id/promo"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_marginStart="24dp"
                 android:src="@drawable/ic_outline_remove_red_eye_24"
                 app:layout_constraintStart_toStartOf="parent"
@@ -163,6 +163,43 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/bio" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:text="instagram.com/michael.loiacono/"
+                app:layout_constraintStart_toEndOf="@+id/instaButton"
+                app:layout_constraintTop_toTopOf="@+id/instaButton" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Michael Lo Iacono"
+                app:layout_constraintStart_toEndOf="@+id/name"
+                app:layout_constraintTop_toTopOf="@+id/name" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="fragmentox88@gmail.com"
+                app:layout_constraintStart_toEndOf="@+id/email"
+                app:layout_constraintTop_toTopOf="@+id/email" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="**********"
+                app:layout_constraintStart_toEndOf="@+id/passwort"
+                app:layout_constraintTop_toTopOf="@+id/passwort" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

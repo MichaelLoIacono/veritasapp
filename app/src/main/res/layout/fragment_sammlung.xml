@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="28dp"
-                android:backgroundTint="#11ED7B"
+                android:backgroundTint="#0011ED7B"
                 android:src="@drawable/ic_outline_add_photo_alternate_24"
                 app:layout_constraintStart_toEndOf="@+id/favorit"
                 app:layout_constraintTop_toTopOf="parent"
