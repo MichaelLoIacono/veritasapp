@@ -1,4 +1,4 @@
-package com.example.poste.de.syntaxinstitut.veritasapp.ui.two
+package com.example.poste.de.syntaxinstitut.veritasapp.Data
 
 import android.util.Log
 import androidx.lifecycle.LiveData

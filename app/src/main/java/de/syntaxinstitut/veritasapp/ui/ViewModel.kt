@@ -1,16 +1,13 @@
-package com.example.poste.de.syntaxinstitut.veritasapp.ui.two
+package de.syntaxinstitut.veritasapp.ui
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.*
-import androidx.lifecycle.ViewModel
-import com.example.poste.Datasource
+import com.example.poste.de.syntaxinstitut.veritasapp.Data.Datasource
+import com.example.poste.de.syntaxinstitut.veritasapp.Data.AppRepository
 import com.example.poste.de.syntaxinstitut.veritasapp.Datamodel.ImageData
 import com.example.poste.de.syntaxinstitut.veritasapp.local.getDatabase
 import com.example.poste.de.syntaxinstitut.veritasapp.remote.VeritasApi
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class ViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -43,6 +40,9 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
        }
     }
 
+    /**
+     * nimmt die Image aus der Database
+     */
     fun getImagesDatabase() {
         viewModelScope.launch {
             _dataBaseImageListe = database.veritasDatabaseDao.getAll().toMutableLiveData()
@@ -50,12 +50,18 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    /**
+     * Speichert die Image
+     */
     fun saveImage(image: ImageData) {
         viewModelScope.launch {
             database.veritasDatabaseDao.insertIMAGE(image)
         }
     }
 
+    /**
+     * Löscht Image
+     */
     fun deletImage(image: ImageData) {
         viewModelScope.launch {
             database.veritasDatabaseDao.deleteById(image.bildname)

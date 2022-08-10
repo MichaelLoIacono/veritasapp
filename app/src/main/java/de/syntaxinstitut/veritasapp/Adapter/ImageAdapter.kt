@@ -11,7 +11,6 @@ import coil.transform.RoundedCornersTransformation
 import com.example.poste.de.syntaxinstitut.veritasapp.Datamodel.ImageData
 import com.example.poste.de.syntaxinstitut.veritasapp.ui.community.CommunityFragmentDirections
 import de.syntaxinstitut.veritasapp.R
-import de.syntaxinstitut.veritasapp.SammlungFragmentDirections
 import de.syntaxinstitut.veritasapp.databinding.ListPosteBinding
 
 class ImageAdapter(private val posteListe: List<ImageData>, private val currentFragment: String) :
@@ -25,6 +24,11 @@ class ImageAdapter(private val posteListe: List<ImageData>, private val currentF
         return PosteViewHolder(binding)
     }
 
+    /**
+     * /**
+     * WIrd für jeden ListItem einmal ausgeführt und definiert den inhalt.
+    */
+     */
     override fun onBindViewHolder(holder: PosteViewHolder, position: Int) {
         val poste = posteListe[position]
         holder.binding.posteTitel.text = poste.userID.toString()

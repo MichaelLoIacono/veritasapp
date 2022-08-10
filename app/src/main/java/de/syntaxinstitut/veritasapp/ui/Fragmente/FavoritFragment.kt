@@ -1,24 +1,17 @@
-package de.syntaxinstitut.veritasapp.ui.two
+package de.syntaxinstitut.veritasapp.ui.Fragmente
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.net.toUri
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import coil.load
-import coil.transform.RoundedCornersTransformation
-import com.example.poste.ImageAdapter
 import com.example.poste.de.syntaxinstitut.veritasapp.Adapter.FavoriteAdapter
-import com.example.poste.de.syntaxinstitut.veritasapp.ui.community.CommunityFragmentDirections
-import com.example.poste.de.syntaxinstitut.veritasapp.ui.two.ViewModel
 import de.syntaxinstitut.veritasapp.R
-import de.syntaxinstitut.veritasapp.databinding.FragmentCommunityBinding
 import de.syntaxinstitut.veritasapp.databinding.FragmentFavoritBinding
+import de.syntaxinstitut.veritasapp.ui.ViewModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +22,11 @@ class FavoritFragment : Fragment() {
 
 
 
-
+    /**
+     * /**
+     * Created die View.
+    */
+     */
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,6 +37,11 @@ class FavoritFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * /**
+     * wird aufgerufen wenn er fertig created.
+    */
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 

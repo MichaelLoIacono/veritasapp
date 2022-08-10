@@ -10,7 +10,11 @@ import retrofit2.http.GET
 
 const val BASE_URL = "http://syntax-institut.com/public/apps/MichaelLoIacono/"
 
-
+/**
+ * /**
+ * sind Variable die in der Api umgewandelt werden.
+*/
+ */
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .build()

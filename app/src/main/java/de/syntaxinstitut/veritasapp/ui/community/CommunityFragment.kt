@@ -10,11 +10,9 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.poste.ImageAdapter
-import com.example.poste.de.syntaxinstitut.veritasapp.Adapter.PosteAdapter
-import com.example.poste.de.syntaxinstitut.veritasapp.ui.two.ViewModel
 import de.syntaxinstitut.veritasapp.R
 import de.syntaxinstitut.veritasapp.databinding.FragmentCommunityBinding
-import de.syntaxinstitut.veritasapp.ui.two.HomeFragmentDirections
+import de.syntaxinstitut.veritasapp.ui.ViewModel
 
 class CommunityFragment : Fragment(R.layout.fragment_community) {
 

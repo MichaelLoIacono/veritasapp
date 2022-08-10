@@ -1,14 +1,8 @@
 package de.syntaxinstitut.veritasapp
 
-import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintSet
-import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -16,7 +10,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.poste.Datasource
 import com.google.android.material.navigation.NavigationView
 import de.syntaxinstitut.veritasapp.databinding.ActivityMainBinding
 
@@ -46,11 +39,16 @@ class MainActivity : AppCompatActivity() {
         private val  idSets = setOf(R.id.fragment_profil,R.id.fragment_profildaten,R.id.fragment_sammlung)
         private lateinit var appBarConfig: AppBarConfiguration
 
-
+    /**
+     * wird aufgerufen wenn die app Createt.
+     */
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
 
+        /**
+         * Toolbar Funktion
+         */
             val toolbar: Toolbar = findViewById(R.id.toolbar)
             setSupportActionBar(toolbar)
 
@@ -63,6 +61,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /**
+     * Navigiert zur APPbar
+     */
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host)
         return navController.navigateUp(appBarConfig) || super.onSupportNavigateUp()

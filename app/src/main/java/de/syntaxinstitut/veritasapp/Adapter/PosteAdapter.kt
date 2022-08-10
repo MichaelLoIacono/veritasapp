@@ -2,17 +2,18 @@ package com.example.poste.de.syntaxinstitut.veritasapp.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.net.toUri
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
-import coil.transform.RoundedCornersTransformation
-import com.example.poste.Poste
-import com.example.poste.de.syntaxinstitut.veritasapp.ui.community.CommunityFragmentDirections
-import de.syntaxinstitut.veritasapp.R
-import de.syntaxinstitut.veritasapp.SammlungFragmentDirections
+import com.example.poste.de.syntaxinstitut.veritasapp.Data.Datamodel.Poste
 import de.syntaxinstitut.veritasapp.databinding.ListPosteBinding
+import de.syntaxinstitut.veritasapp.ui.Fragmente.SammlungFragmentDirections
 
+
+/**
+ * /**
+ * Der Adapter kümmert sich um meine ListItem.
+*/
+ */
 class PosteAdapter(private val posteListe: List<Poste>, private val currentFragment: String) :
     RecyclerView.Adapter<PosteAdapter.PosteViewHolder>() {
     class PosteViewHolder(val binding: ListPosteBinding) : RecyclerView.ViewHolder(binding.root)
@@ -24,6 +25,11 @@ class PosteAdapter(private val posteListe: List<Poste>, private val currentFragm
         return PosteViewHolder(binding)
     }
 
+    /**
+     * /**
+     * WIrd für jeden ListItem einmal ausgeführt und definiert den inhalt.
+    */
+     */
     override fun onBindViewHolder(holder: PosteViewHolder, position: Int) {
         val poste = posteListe[position]
         holder.binding.posteTitel.text = poste.titel.toString()
@@ -34,7 +40,9 @@ class PosteAdapter(private val posteListe: List<Poste>, private val currentFragm
         }
     }
 
-
+    /**
+     * Liefert die größer der Liste
+     */
     override fun getItemCount(): Int {
         return posteListe.size
     }

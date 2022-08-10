@@ -1,8 +1,7 @@
-package com.example.poste
+package com.example.poste.de.syntaxinstitut.veritasapp.Data
 
 import android.content.Context
-import de.syntaxinstitut.veritasapp.R
-
+import com.example.poste.de.syntaxinstitut.veritasapp.Data.Datamodel.Poste
 
 
 /**

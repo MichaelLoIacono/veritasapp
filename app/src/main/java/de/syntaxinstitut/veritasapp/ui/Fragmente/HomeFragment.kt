@@ -1,4 +1,4 @@
-package de.syntaxinstitut.veritasapp.ui.two
+package de.syntaxinstitut.veritasapp.ui.Fragmente
 
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
@@ -16,6 +16,12 @@ import de.syntaxinstitut.veritasapp.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
     private lateinit var binding:FragmentHomeBinding
+
+    /**
+     * /**
+     * Created die View.
+    */
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,6 +30,11 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * /**
+     * wird aufgerufen wenn er fertig created.
+    */
+     */
     lateinit var adapter: PosteAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -36,6 +47,12 @@ class HomeFragment : Fragment() {
         animationDrawable.setExitFadeDuration(5000);
         animationDrawable.start();
 
+
+        /**
+         * /**
+         * Onclick wird aufgerufen wenn man die button drückt + navigation.
+        */
+         */
    binding.button2.setOnClickListener{
        findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToCommunityFragment())
 

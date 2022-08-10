@@ -22,6 +22,11 @@ class FavoriteAdapter(private val posteListe: List<ImageData>, private val curre
         return PosteViewHolder(binding)
     }
 
+    /**
+     * /**
+     * WIrd für jeden ListItem einmal ausgeführt und definiert den inhalt.
+    */
+     */
     override fun onBindViewHolder(holder: PosteViewHolder, position: Int) {
         val poste = posteListe[position]
         holder.binding.posteTitel.text = poste.userID.toString()
@@ -35,7 +40,11 @@ class FavoriteAdapter(private val posteListe: List<ImageData>, private val curre
 
     }
 
-
+    /**
+     * /**
+     * zeigt an wie groß der inhalt der Liste ist.
+    */
+     */
     override fun getItemCount(): Int {
         return posteListe.size
     }

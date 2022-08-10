@@ -1,5 +1,5 @@
 
-package de.syntaxinstitut.veritasapp
+package de.syntaxinstitut.veritasapp.ui.Fragmente
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,8 +9,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.poste.de.syntaxinstitut.veritasapp.Adapter.PosteAdapter
-import com.example.poste.de.syntaxinstitut.veritasapp.ui.two.ViewModel
+import de.syntaxinstitut.veritasapp.R
 import de.syntaxinstitut.veritasapp.databinding.FragmentSammlungBinding
+import de.syntaxinstitut.veritasapp.ui.ViewModel
 
 /* -------------------- Klassen Variablen -------------------- */
 
@@ -39,6 +40,9 @@ class SammlungFragment : Fragment(R.layout.fragment_sammlung) {
         return binding.root
     }
 
+    /**
+     * wird aufgerufen wenn es fertig ist mit der Created.
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val posteList = viewModel.posteList

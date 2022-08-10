@@ -6,7 +6,7 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="de.syntaxinstitut.veritasapp.ui.two.HomeFragment"
+        android:name="de.syntaxinstitut.veritasapp.ui.Fragmente.HomeFragment"
         android:label="" >
         <action
             android:id="@+id/action_homeFragment_to_communityFragment"
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_showroom"
-        android:name="de.syntaxinstitut.veritasapp.fragment_showroom"
+        android:name="de.syntaxinstitut.veritasapp.ui.showroom.ShowroomFragment"
         android:label=""
         tools:layout="@layout/fragment_showroom" >
         <action
@@ -55,18 +55,18 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_profil"
-        android:name="de.syntaxinstitut.veritasapp.ui.two.ProfilFragment"
+        android:name="de.syntaxinstitut.veritasapp.ui.Fragmente.ProfilFragment"
         android:label=""
         tools:layout="@layout/fragment_profil" />
     <fragment
         android:id="@+id/fragment_profildaten"
-        android:name="de.syntaxinstitut.veritasapp.Fragment_profildaten"
+        android:name="de.syntaxinstitut.veritasapp.ui.Fragmente.Fragment_profildaten"
         android:label=""
         tools:layout="@layout/fragment_profildaten" />
     <fragment
         android:id="@+id/fragment_sammlung"
-        android:name="de.syntaxinstitut.veritasapp.SammlungFragment"
-        android:label="fragment_sammlung" >
+        android:name="de.syntaxinstitut.veritasapp.ui.Fragmente.SammlungFragment"
+        android:label="" >
         <action
             android:id="@+id/action_fragment_sammlung_to_detailFragment"
             app:destination="@id/detailFragment" />
@@ -89,7 +89,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoritFragment"
-        android:name="de.syntaxinstitut.veritasapp.ui.two.FavoritFragment"
+        android:name="de.syntaxinstitut.veritasapp.ui.Fragmente.FavoritFragment"
         android:label="fragment_favorit"
         tools:layout="@layout/fragment_favorit" />
 </navigation>

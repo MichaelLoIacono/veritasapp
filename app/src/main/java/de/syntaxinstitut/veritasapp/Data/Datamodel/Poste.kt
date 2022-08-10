@@ -1,4 +1,4 @@
-package com.example.poste
+package com.example.poste.de.syntaxinstitut.veritasapp.Data.Datamodel
 
 /**
  * Diese Klasse repräsentiert einen Bildtitel
