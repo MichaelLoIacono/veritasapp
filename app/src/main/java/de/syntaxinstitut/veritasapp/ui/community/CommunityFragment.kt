@@ -55,6 +55,8 @@ class CommunityFragment : Fragment(R.layout.fragment_community) {
         viewModel.imageList.observe(viewLifecycleOwner) {
             recyclerView.adapter = ImageAdapter(it, "community")
         }
+
+        // Navigation button zur andere fragmente
         binding.favoritBtn2.setOnClickListener {
             findNavController().navigate(CommunityFragmentDirections.actionCommunityFragmentToFavoritFragment())
 

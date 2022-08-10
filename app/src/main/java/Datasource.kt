@@ -29,7 +29,7 @@ class Datasource(private val context: Context) {
             val screen = getScreen(title)
 
 
-            // Füge ein Movie Objekt hinzu
+            // Füge ein Poste Objekt hinzu
             postes.add(
 
                 Poste(title, image,screen)

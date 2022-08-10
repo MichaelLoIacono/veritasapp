@@ -27,7 +27,7 @@ class FavoriteAdapter(private val posteListe: List<ImageData>, private val curre
         holder.binding.posteTitel.text = poste.userID.toString()
         val imgUri = poste.file.toUri().buildUpon().scheme("http").build()
 
-
+        // Image Error
         holder.binding.posteBild.load(imgUri) {
             error(R.drawable.ic_baseline_broken_image_24)
             transformations(RoundedCornersTransformation(10f))

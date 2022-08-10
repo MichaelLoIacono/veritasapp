@@ -3,6 +3,10 @@ package com.example.poste.de.syntaxinstitut.veritasapp.Datamodel
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+/**
+ * Diese Klasse repräsentiert einen Bildtitel von der API
+ */
+
 @Entity
 data class ImageData(
     @PrimaryKey(autoGenerate = true)

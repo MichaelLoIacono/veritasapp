@@ -30,7 +30,7 @@ class ImageAdapter(private val posteListe: List<ImageData>, private val currentF
         holder.binding.posteTitel.text = poste.userID.toString()
         val imgUri = poste.file.toUri().buildUpon().scheme("http").build()
 
-
+        // Image Error
         holder.binding.posteBild.load(imgUri) {
             error(R.drawable.ic_baseline_broken_image_24)
             transformations(RoundedCornersTransformation(10f))
@@ -39,6 +39,7 @@ class ImageAdapter(private val posteListe: List<ImageData>, private val currentF
         holder.itemView.setOnClickListener {
             val navController = holder.itemView.findNavController()
 
+            //hier werden die Details dur die Porsition geholt
             navController.navigate(
                 CommunityFragmentDirections.actionCommunityFragmentToCommunityDetailFragment(
                     position

@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="de.syntaxinstitut.veritasapp.ui.two.HomeFragment"
-        android:label="HomeFragment" >
+        android:label="" >
         <action
             android:id="@+id/action_homeFragment_to_communityFragment"
             app:destination="@id/communityFragment" />
@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/communityFragment"
         android:name="com.example.poste.de.syntaxinstitut.veritasapp.ui.community.CommunityFragment"
-        android:label="CommunityFragment" >
+        android:label="" >
         <action
             android:id="@+id/action_communityFragment_to_fragment_showroom"
             app:destination="@id/fragment_showroom" />
@@ -44,7 +44,7 @@
     <fragment
         android:id="@+id/fragment_showroom"
         android:name="de.syntaxinstitut.veritasapp.fragment_showroom"
-        android:label="fragment_showroom"
+        android:label=""
         tools:layout="@layout/fragment_showroom" >
         <action
             android:id="@+id/action_fragment_showroom_to_communityFragment"
@@ -56,12 +56,12 @@
     <fragment
         android:id="@+id/fragment_profil"
         android:name="de.syntaxinstitut.veritasapp.ui.two.ProfilFragment"
-        android:label="fragment_profil"
+        android:label=""
         tools:layout="@layout/fragment_profil" />
     <fragment
         android:id="@+id/fragment_profildaten"
         android:name="de.syntaxinstitut.veritasapp.Fragment_profildaten"
-        android:label="fragment_profildaten"
+        android:label=""
         tools:layout="@layout/fragment_profildaten" />
     <fragment
         android:id="@+id/fragment_sammlung"
